@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Banked Reset Guard"
+  short_description: "Check and safely redeem expiring Codex resets"
+  default_prompt: "Use $codex-banked-reset-guard to inspect my banked Codex resets and report one-hour expiry risk without redeeming anything."
