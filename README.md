@@ -4,6 +4,10 @@ A Codex Skill and dependency-free Python guard for banked Codex rate-limit reset
 
 The default guard window is **1 hour before expiry**. Inspection and dry runs never mutate the account; redemption always requires `--apply`.
 
+## What this repository is
+
+This repository ships one installable Codex Skill plus its deterministic Python CLI, tests, and scheduler-ready automation contract. Codex uses the Skill instructions to choose and interpret commands; the bundled script performs the actual read or redemption. It is not a Codex plugin, MCP server, or hosted service.
+
 ## Safety boundary
 
 The guard delegates authentication and account selection to `codex app-server`. It does not read `~/.codex/auth.json`, accept a backend URL, call private ChatGPT web endpoints, or print raw tokens, account IDs, credit IDs, or protocol responses.
@@ -49,7 +53,7 @@ Verify the global Codex installation:
 npx --yes skills@1.5.21 list -g -a codex
 ```
 
-The GitHub URL becomes usable after this repository is published under the authenticated owner `M47E1`.
+These commands target the public repository at `https://github.com/M47E1/codex-banked-reset-guard`.
 
 The default Skill prompt is intentionally read-only:
 
